@@ -17,6 +17,16 @@
     <ion-item>
       <ion-input label="Email" placeholder="Insira o email" [(ngModel)]="email"></ion-input>
     </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Gênero" [(ngModel)]="sexo">
+          <div slot="label">Gênero</div>
+          <ion-select-option value="Feminino">Feminino</ion-select-option>
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Não declarado">Prefiro não declarar</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
     <ion-button expand="block" (click)="cadastrar()">Enviar</ion-button>
   </ion-list>
 
@@ -28,6 +38,7 @@
       <ion-label>{{contato.nome}}</ion-label>
       <ion-label>{{contato.telefone}}</ion-label>
       <ion-label>{{contato.email}}</ion-label>
+      <ion-label>{{contato.sexo}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
